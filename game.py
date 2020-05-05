@@ -1,15 +1,16 @@
 from random import randint
+import sys
 
 
 class GuessGame:
 
     def __init__(self, lower_bound=1, upper_bound=100):
-        self.__guesses = 1
         self.__MIN = lower_bound
         self.__MAX = upper_bound
-        self.__NUMBER = randint(self.__MIN, self.__MAX)
 
     def play(self):
+        self.__NUMBER = randint(self.__MIN, self.__MAX)
+        self.__guesses = 1
         while 1:
 
             number = self.__get_guess()
