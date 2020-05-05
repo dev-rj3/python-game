@@ -23,6 +23,15 @@ class GuessGame:
             self.__guesses += 1
 
         print(f'Guessed with {self.__guesses}')
+        self.__play_again()
+
+    def __play_again(self):
+        respose = input('Want to play again? y/n ')
+        respose = respose.lower().strip()
+        if respose[0] == 'y':
+            self.play()
+        else:
+            sys.exit(1)
 
     def __get_guess(self):
         response = input(
