@@ -1,5 +1,4 @@
 from random import randint
-import sys
 
 
 class GuessGame:
@@ -31,8 +30,6 @@ class GuessGame:
         respose = respose.lower().strip()
         if respose[0] == 'y':
             self.play()
-        else:
-            sys.exit(1)
 
     def __get_guess(self):
         response = input(
